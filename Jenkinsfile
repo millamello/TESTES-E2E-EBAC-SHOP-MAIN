@@ -2,28 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonar repositório') {
+        stage('Clonar Repositorio') {
             steps {
-                git branch: 'main', url: 'https://github.com/millamello/TESTES-E2E-EBAC-SHOP-MAIN.git'
+               git branch: 'main', url: 'https://github.com/millamello/TESTES-E2E-EBAC-SHOP-MAIN.git'
             }
-        }
-        stage('Instalar dependências') {
+        } stage('Instalar Dependências') {
             steps {
-                powershell 'npm install'
+               sh 'npm install'
             }
-        }
-        stage('Ativar plugin ansiColor') {
+        }stage('Executar Testes') {
             steps {
-                ansiColor('gnome-terminal') {
-    // some block
-}
-            }
-        }
-        
-        stage('exercutar os testes ') {
-            steps {
-                powershell 'npm run cy:run'
+               sh 'npm run cy:run'
             }
         }
     }
+
 }
+    
