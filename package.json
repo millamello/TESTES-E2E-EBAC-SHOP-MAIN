@@ -8,7 +8,8 @@
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
     "cy:dashboard": "",
-    "cy:report": "npx cypress run --record --key ece03813-0fbb-47a2-9415-b99a01560d10"
+    "cy:report": "npx cypress run --record --key ece03813-0fbb-47a2-9415-b99a01560d10",
+    "cy:run-ci": "start-server-and-test start http://localhost:3000/api-doc test"
   },
   "repository": {
     "type": "git",

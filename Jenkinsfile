@@ -12,7 +12,7 @@ pipeline {
             }
         }stage('Executar Testes') {
             steps {
-               sh 'npm run cy:run'
+               sh 'start-server-and-test start http://localhost:3000/api-doc test'
             }
         }
     }
