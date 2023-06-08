@@ -10,9 +10,10 @@ pipeline {
             steps {
                sh 'npm install'
             }
+        }
         }stage('Executar Testes') {
             steps {
-               sh 'start-server-and-test start http://localhost:3000/api-doc test'
+               sh 'npm run start-server-and-test start-server http://localhost:3000/api-doc test'
             }
         }
     }
