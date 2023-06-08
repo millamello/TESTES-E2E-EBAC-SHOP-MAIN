@@ -13,10 +13,10 @@ pipeline {
         }
         }stage('Executar Testes') {
             steps {
-               sh 'npm run start-server-and-test start-server http://localhost:3000/api-doc test'
+               sh 'npx run start-server-and-test start-server http://localhost:3000/api-doc test'
             }
         }
-    }
-
 }
+
+
     
